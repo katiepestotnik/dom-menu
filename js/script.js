@@ -7,3 +7,12 @@ mainEl.innerHTML = '<h1>SEI Rocks!</h1>'
 //task 1.3
 mainEl.setAttribute('class', 'flex-ctr')
 
+//task 2.0
+const topMenuEl = document.querySelector('#top-menu')
+//task 2.1
+topMenuEl.style.height = '100%'
+//task 2.2
+topMenuEl.style.backgroundColor = 'var(--top-menu-bg)'
+//task 2.3
+topMenuEl.setAttribute('class', 'flex-around')
+
