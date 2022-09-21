@@ -33,3 +33,21 @@ menuLinks.forEach((link) => {
     linkEl.innerHTML = link.text
     topMenuEl.append(linkEl)
 })
+
+//task 4.0
+const subMenuEl = document.querySelector('#sub-menu')
+
+//tast 4.1
+subMenuEl.style.height = '100%'
+
+//taks 4.2
+subMenuEl.style.backgroundColor = 'var(--sub-menu-bg)'
+
+//task 4.3
+subMenuEl.setAttribute('class', 'flex-around')
+
+//task 4.4
+subMenuEl.style.position = 'absolute'
+
+//task 4.5
+subMenuEl.style.top = 0
