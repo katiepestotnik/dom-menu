@@ -107,9 +107,12 @@ topMenuEl.addEventListener("click", (e) => {
     if (link === e.target) link.classList.add("active");
     //task 5.6
     if (e.target.text !== "about") {
-      showingSubMenu = true;
+        showingSubMenu = true;
+        mainEl.innerHTML = "<h1>SEI Rocks!</h1>"
     } else {
-      showingSubMenu = false;
+        showingSubMenu = false;
+        //task 6.4
+        mainEl.innerHTML = '<h1>ABOUT</h1>'
     }
     let object = e.target
     //task 5.7 and 5.8
@@ -131,8 +134,6 @@ topMenuEl.addEventListener("click", (e) => {
               } 
         })
       } else {
-        //task 6.4
-         mainEl.innerHTML = '<h1>ABOUT</h1>'
           subMenuEl.style.top = 0
     }
   });
