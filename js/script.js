@@ -89,10 +89,10 @@ topMenuEl.addEventListener("click", (e) => {
   e.preventDefault();
   topMenuLinks.forEach((link) => {
     if (e.target !== link) return;
-    console.log(link);
+    //console.log(link);
     //task 5.3
     if (e.target.classList.contains("active")) {
-      console.log(e.target);
+      //console.log(e.target);
       e.target.classList.remove("active");
       showingSubMenu = false;
       subMenuEl.style.top = 0;
@@ -100,7 +100,7 @@ topMenuEl.addEventListener("click", (e) => {
     }
     //task 5.4
     topMenuLinks.forEach((link) => {
-      console.log(link);
+      //console.log(link);
       link.classList.remove("active");
     });
     //task 5.5
@@ -131,7 +131,25 @@ topMenuEl.addEventListener("click", (e) => {
               } 
         })
       } else {
+        //task 6.4
+         mainEl.innerHTML = '<h1>ABOUT</h1>'
           subMenuEl.style.top = 0
     }
   });
 });
+
+//task 6.0
+subMenuEl.addEventListener('click', (e) => {
+    e.preventDefault()
+    if (!e.target.href) return
+    // task 6.1
+    showingSubMenu = false
+    subMenuEl.style.top = 0
+    //task 6.2
+    topMenuLinks.forEach((ele) => {
+        ele.classList.remove('active')
+    })
+    //task 6.3
+    mainEl.innerHTML =`<h1>${e.target.text}</h1>` 
+
+})
